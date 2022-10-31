@@ -68,6 +68,4 @@ equal.addEventListener('click', () => {
         resultValue = firstValue * secondValue;
     }
     result.innerText = resultValue;
-    
-
 })
