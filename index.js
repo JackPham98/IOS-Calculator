@@ -13,11 +13,11 @@ let secondVa = "";
 let currentVa = 0;
 let sign = "";
 let nSign = "-1";
-
 result.innerText = 0;
 
-clear.addEventListener('click', ()=> {
+//Clear function:
 //Set default values:
+clear.addEventListener('click', ()=> {
     firstVa = "";
     secondVa = "";
     currentVa = 0;
