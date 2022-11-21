@@ -143,9 +143,9 @@ equal.addEventListener('click', () => {
     console.log(`second value is ${secondVa}`)
     firstVa = parseFloat(firstVa);
     secondVa = parseFloat(secondVa);
-    console.log(typeof firstVa);
-    console.log(typeof secondVa);
-    if (sign === "+" && typeof firstVa === "number" && typeof secondVa === "number") {
+    if (sign === "/" && typeof firstVa === "number"  && typeof secondVa === 0) {
+        currentVa = "Error";
+    } else if (sign === "+" && typeof firstVa === "number" && typeof secondVa === "number") {
         currentVa = firstVa + secondVa;
     } else if (sign === "-" && typeof firstVa === "number" && typeof secondVa === "number") {
         currentVa = firstVa - secondVa;
@@ -153,10 +153,16 @@ equal.addEventListener('click', () => {
         currentVa = firstVa * secondVa;
     } else if (sign === "/" && typeof firstVa === "number" && typeof secondVa === "number") {
         currentVa = firstVa / secondVa;
-    } else if (sign === "/" && typeof firstVa === "number"  && typeof secondVa === 0) {
-        currentVa = "Error";
-
-    }
+    } else if (firstVa && !sign || !secondVa) {
+        currentVa = firstVa;
+    } 
+    // else if (firstVa && sign != '' && secondVa === ''){
+    //     secondVa = 0;
+    //     currentVa = firstVa + secondVa;
+    //     console.log(firstVa);
+    //     console.log(secondVa);
+    //     console.log(currentVa)
+    // }
     firstVa = currentVa;
     firstVa = firstVa.toString();
     result.innerText = firstVa;
